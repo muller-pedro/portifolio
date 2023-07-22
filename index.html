@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meu site</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+        }
+      
+        #nome {
+            font-size: 25px;
+        }
+
+        header{
+            background-color: #22454D;
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: fixed;
+            box-shadow: 3px 4px 8px #428392;
+ 
+        }
+        .header-fix{
+            background-color: transparent;
+            padding: 10px 20px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            margin-left: -30px;
+            
+        }
+
+        body {
+            background-color: #5F787D;
+        }
+
+        .div-meio{
+            background-color: rgb(172, 185, 195);
+            text-align: center;
+            max-width: 700px;
+            margin: auto;
+            height: 1100px;
+            padding-top: 8em;
+            
+            border: 1px solid rgba(0, 0, 0, 0.338);
+            
+        
+        }
+
+
+        #meu-perfil {
+            background-color: slategrey;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-image: url(img/myimg.jpg);
+            background-size: 150px;
+        }
+
+        .menu-open {
+            
+            margin-left:10px;
+            transition: 0.8s;
+        }
+        #op {
+            display: flex;flex-direction: row;
+        }
+        .menu-open:hover {
+            
+            color: rgb(37, 141, 201);
+        }
+        #container-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            
+        }
+        #linhaDivisao0 {
+            
+            
+            width: 65%;
+            margin: auto;
+            background-color: red;
+ 
+            }
+        #linhaDivisao {
+            
+            
+            width: 65%;
+            margin: auto;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            border-bottom: 2px solid lightslategrey;
+        }
+        #linhaDivisao2 {
+            
+            
+            width: 65%;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-bottom: 2px solid lightslategrey;
+        }
+
+        .menuImg{
+                display: none;
+                
+                align-items: center;
+                justify-content: center;
+        }
+        .menuImg:hover {
+                background-color: lightslategray;
+                
+                display: flex;
+              
+
+
+        }
+
+        #container-tec {
+            width: 80%;
+            border: 1px solid rgba(0, 0, 0, 0.413);
+            margin: auto;
+            
+            border-radius: 7px;
+            height: 150px;
+            
+            align-items: center;
+
+            
+        }
+        #container-tec:hover {
+            background-color: #50a1b36b;
+            transition: 2s;
+        }
+        #cab-tec {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+            background-color: #22454D;
+            
+            
+            margin-bottom: 20px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            box-shadow: 3px 4px 8px #428392;
+
+        }
+        #img-tec {
+            display: flex;
+            justify-content: space-around;
+        }
+        .imgens-tec:hover {
+           width: 100px;
+           height: 100px;
+        }
+
+        #container-proj {
+            
+            width: 80%;
+            height: 150px;
+            margin: auto;
+            border-radius: 7px;
+            border: 1px solid rgba(0, 0, 0, 0.413);
+        }
+        #cab-proj {
+            background-color: #22454D;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 3px 4px 8px #428392;
+            
+        }
+
+        footer {
+            /*width: 100%;*/
+            height: 100px;
+            background-color: #162C30 ;
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        #footer-esquerda{
+            width: 70%;
+            background-color: transparent;
+            color: white;
+        }
+        #footer-direita{
+            width: 30%;
+            background-color: transparent;
+        }
+
+
+
+        #social-cab{
+            background-color: transparent;
+            color: white;
+            font-weight: bold;
+            margin: 10px 0px 10px 0px;
+            text-align: center;
+        }
+
+        #social-imgs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+
+        #contact-cab {
+            background-color: transparent;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            
+
+        }
+
+        .socImg {
+            margin: 2px;
+        }
+
+        #soc:hover {
+            width:40px;
+            height:40px;
+        }
+
+        #email {
+            text-align: center;
+            margin: 10px 0px 0px 0px;
+        }
+        #opSec{
+            display: none;
+            position: absolute;
+            background-color: lightslategray;
+            border-radius: 7px;
+            padding: 3px;
+            margin-left: +500px;
+            margin-top: 35px;
+            border: 1px solid rgba(0, 0, 0, 0.622);
+        }
+
+        #box-projetos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        
+        #projeto1{
+            border: 1px solid black;
+            height: 80px;
+            width: 160px;
+            background-image: url(img/proj-01.jpg);
+            background-size: 160px ;
+            background-repeat: no-repeat;
+        }
+        #projeto2{
+            border: 1px solid black;
+            height: 80px;
+            width: 160px;
+            background-image: url();
+            background-size: 160px ;
+            background-repeat: no-repeat;
+        }
+        /* ~~~~   botão próxima foto ~~~~~~~~~*/
+        #nextImage {
+            margin: 2px;
+            padding: 3px;
+
+        }
+
+        span {
+            font-weight: bold;
+        }
+
+        @media (max-width:600px) {
+            .menu-open{
+                display: flex;
+                
+            }
+            .menuImg{
+                display: flex;
+                margin-right: -150px;
+            }
+
+            .imgens-tec {
+                height: 40px;
+                width: 40px;
+            }
+            #op {
+             /*   display: none;*/
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: +50px;
+                background-color: lightslategray;
+                font-size: 20px;
+                right: -200px;
+                border-radius: 5px;
+                border: 1px rgba(0, 0, 0, 0.455) solid;
+                
+            }
+            #opSec{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: +50px;
+                background-color: lightslategray;
+                font-size: 20px;
+                right: -150px;
+                border-radius: 5px;
+                border: 1px rgba(0, 0, 0, 0.455) solid;
+            }
+         
+
+        }
+        #copyButton{
+            padding: 4px;
+        }
+    </style>
+</head>
+
+
+<body>
+    
+    <header> 
+        <div id="nome" class="header-fix">
+            Pedro Dias Müller
+        </div>
+
+        <div id="menu" class="header-fix" >
+            <div id="op">
+                <div id="scrollTopButton" class="menu-open">Sobre</div> 
+                <div id="scrollHabilidades" class="menu-open">Habilidades</div> 
+                <div id="scrollProjetos" class="menu-open">Projetos</div> 
+                <div id="scrollContact" class="menu-open">Contato</div>
+            </div>
+              <div onclick="openWindow()" class="menuImg">
+                <img src="img/menuimg.png" alt="menu">
+            </div>
+            
+            <div id="opSec">
+                <div id="scrollTopButtonSec" class="menu-open">Sobre</div> 
+                <div id="scrollHabilidadesSec" class="menu-open">Habilidades</div> 
+                <div id="scrollProjetosSec" class="menu-open">Projetos</div> 
+                <div id="scrollContactSec" class="menu-open">Contato</div>
+            </div>
+          
+        </div>
+    </header>
+    <div class="div-meio">
+
+        <div id="linhaDivisao0">
+
+        </div>
+
+        <div id="container-1">
+            <div  style="width:50%;">
+                Olá, sou desenvolvedor Jr e atualmente estudo Análise e Desenvolvimento de Sistemas. Encontrei minha paixão por resolver problemas e criar soluções através do código. Sempre buscando aprender e aprimorar minhas habilidades <span>Front e Back-end</span>, estou determinado a explorar as diversas possibilidades que a programação oferece nesse grandioso universo de códigos.  
+
+            </div> 
+            
+            <div id="meu-perfil" >
+                
+            </div>
+        </div>
+
+        
+        <div id="linhaDivisao" style="display: flex; justify-content: flex-start;">
+            <div id="textoDigitado"></div>
+
+        </div>
+
+    
+        
+        <div id="container-tec">
+            <div id="cab-tec"> Habilidades</div>
+            <div id="img-tec">
+                <div><img class="imgens-tec"  id="html5" src="img/html5.png" width="80px" height="80px" alt="html5"></div>
+                <div><img class="imgens-tec" src="img/CSS3.png" width="80px" height="80px" alt="CSS3"></div>
+                <div><img class="imgens-tec" src="img/javascript.png" width="80px" height="80px" alt="JS"></div>
+                <div><img class="imgens-tec" src="img/php.png" width="80px" height="80px" alt="PHP"></div>
+                <div><img class="imgens-tec" src="img/mysql.png" width="80px" height="80px" alt="MySQL"></div>
+            
+            </div>
+
+        
+
+        </div>
+
+        <div id="linhaDivisao2">
+
+        </div>
+
+        <div id="container-proj">
+            <div id="cab-proj">Projetos(disponíveis no github)</div>
+
+            <div id="box-projetos">
+                <div id="projeto1" class="projetos" onmouseover="projetoZoom();" onmouseleave="projetoZoomoff()">  </div>
+                <div id="projeto2" class="projetos"> projeto 2 </div>
+            </div>
+            
+            <div style="display: flex;flex-direction: row;justify-content: space-around;">
+                    
+                <div>
+                    <button id="nextImage" onclick="nextImageButton();"> next</button>
+                </div>
+                <div>(projeto 2 em construção)</div>
+            </div>
+    
+        </div>
+
+
+
+        
+    
+
+    </div> <!--  FIM MEIO ~/~/~/~/~/~/~/~/ -->
+
+
+
+    <footer> 
+        <div id="footer-esquerda">
+            <div id="contact-cab">contato</div>
+            <div id="email">email: peemuller@gmail.com <button id="copyButton">copy</button></div> 
+        </div>
+
+        <div id="footer-direita">
+            <div id="social-cab">Social</div>
+            <div id="social-imgs">
+                <div class="socImg">
+                    <img id="soc" src="img/whats.png" onclick="gerarLinkWhatsApp();" width="30px" height="30px" alt="whats">
+                </div>
+                <div class="socImg">
+                    <img id="soc" src="img/github.png" style="border-radius: 50%;" onclick="direcionaGH();" width="30px" height="30px" alt="whats">
+                </div>
+                <div class="socImg">
+                    <img id="soc" src="img/linkedin.png" style="border-radius: 50%;" onclick="direcionaLinkedIn();" width="30px" height="30px" alt="whats">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+
+
+    <script>
+
+
+
+function gerarLinkWhatsApp() {
+    const link = `https://api.whatsapp.com/send?phone=5548992106080&text=Olá ...`;
+    window.open(link, '_blank');
+}
+function direcionaGH() {
+        const link = `https://github.com/muller-pedro/`;
+        window.open(link, '_blank');
+}
+function direcionaLinkedIn() {
+        const link = `https://www.linkedin.com/in/pedro-m%C3%BCller-1b3145100/`;
+        window.open(link, '_blank');
+}
+
+
+
+
+
+
+    //  API Clipboard
+
+    let copyButton = document.getElementById("copyButton");
+    copyButton.addEventListener("click", async () => {
+    const textoParaCopiar = "peemuller@gmail.com";
+
+    try {
+      await navigator.clipboard.writeText(textoParaCopiar);
+      alert("Texto copiado para a área de transferência!");
+    } catch (err) {
+      console.error("Erro ao copiar o texto: ", err);
+    }
+  });
+
+
+    //click scroll op 
+
+    document.getElementById("scrollHabilidades").addEventListener("click", function() {
+    let destino = document.getElementById("linhaDivisao");
+    destino.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollTopButton").addEventListener("click", function() {
+    document.documentElement.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollProjetos").addEventListener("click", function() {
+    let destino = document.getElementById("linhaDivisao2");
+    destino.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollContact").addEventListener("click", function() { 
+    document.body.scrollIntoView({ behavior: "smooth", block: "end" });
+    });
+
+
+    // click scroll op sec  ~  SECONDáRIO criado para um listener não atrapalhar o outro  ~ 
+
+    document.getElementById("scrollHabilidadesSec").addEventListener("click", function() {
+    let destino = document.getElementById("linhaDivisao");
+    destino.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollTopButtonSec").addEventListener("click", function() {
+    document.documentElement.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollProjetosSec").addEventListener("click", function() {
+    let destino = document.getElementById("linhaDivisao2");
+    destino.scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("scrollContactSec").addEventListener("click", function() { document.body.scrollIntoView({ behavior: "smooth", block: "end" });
+    });
+
+
+    
+    const textoCompleto = "Hello World!  =)";
+    const velocidadeDigitacao = 100;
+    const pausaEntreLoops = 3000; // milisecond
+
+function digitarTexto() {
+  let index = 0;
+  const textoDigitadoElemento = document.getElementById("textoDigitado");
+
+  function exibirCaractere() {
+    textoDigitadoElemento.textContent += textoCompleto[index];
+    index++;
+
+    if (index < textoCompleto.length) {
+      setTimeout(exibirCaractere, velocidadeDigitacao);
+    } else {
+      setTimeout(reiniciarTexto, pausaEntreLoops);
+    }
+  }
+
+  function reiniciarTexto() {
+    textoDigitadoElemento.textContent = "";
+    index = 0;
+    setTimeout(digitarTexto, 0); // começa
+  }
+
+  exibirCaractere();
+}
+
+// start
+
+window.onload = digitarTexto;
+
+
+var visivel = true;
+
+function openWindow() {
+    
+    let opVisible = window.document.getElementById("opSec");
+
+
+    if (visivel) {
+       // opVisible.style.display = "none";
+        visivel = false;
+        opSec.style.backgroundColor = "lightsteelgrey";
+        opSec.style.transform = "translateX(-150px)";
+        opSec.style.transition = "0.3s";
+        opSec.style.transitionTimingFunction = "easy-in";
+        
+    
+    }else{
+        //opVisible.style.display = "flex";
+        visivel = true;
+        opSec.style.transform = "translateX(0px)";
+        
+        
+    }
+
+
+}
+
+
+
+    function projetoZoom(){
+        
+        let projUm = window.document.getElementById("projeto1")
+        projUm.style.width = "600px";
+        projUm.style.height = "300px";
+        projUm.style.position = "absolute";
+        projUm.style.backgroundSize = "700px";
+        projUm.style.marginTop = "-150px";
+
+        
+
+
+
+    }
+
+    function projetoZoomoff() {
+        let projUm = window.document.getElementById("projeto1")
+        projUm.style.width = "160px";
+        projUm.style.height = "80px";
+        projUm.style.position = "relative";
+        projUm.style.backgroundSize = "160px";
+        projUm.style.marginTop = "0px";
+    }
+
+    var imgProj = 1;
+    function nextImageButton() {
+    var imgProjElement = window.document.getElementById("projeto1");
+        if (imgProj == 1) {
+           
+           imgProjElement.style.backgroundImage = "url(img/proj-01a.jpg)";
+           imgProj = 2;
+
+        }else if(imgProj == 2){
+            imgProjElement.style.backgroundImage = "url(img/proj-01b.jpg)";
+            imgProj = 3;
+        }else{
+            imgProjElement.style.backgroundImage = "url(img/proj-01.jpg)";
+            imgProj = 1;
+        }
+    }
+    
+
+    </script>
+
+</body>
+</html>
