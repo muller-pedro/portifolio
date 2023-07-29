@@ -271,9 +271,10 @@
             border: 1px solid black;
             height: 80px;
             width: 160px;
-            background-image: url();
+            background-image: url(img/proj-02a.jpg);
             background-size: 160px ;
             background-repeat: no-repeat;
+            cursor: pointer;
         }
         /* ~~~~   botão próxima foto ~~~~~~~~~*/
         #nextImage {
@@ -409,8 +410,8 @@
             <div id="cab-proj">Projetos(disponíveis no github)</div>
 
             <div id="box-projetos">
-                <div id="projeto1" class="projetos" onmouseover="projetoZoom();" onmouseleave="projetoZoomoff()">  </div>
-                <div id="projeto2" class="projetos"> projeto 2 </div>
+                <div id="projeto1" class="projetos"  onmouseover="projetoZoom();" onmouseleave="projetoZoomoff()">  </div>
+                <div id="projeto2" class="projetos" onclick="newWindow();" > projeto 2 </div>
             </div>
             
             <div style="display: flex;flex-direction: row;justify-content: space-around;">
@@ -418,7 +419,7 @@
                 <div>
                     <button id="nextImage" onclick="nextImageButton();"> next</button>
                 </div>
-                <div>(projeto 2 em construção)</div>
+                <div style="text-align: center;">(click open)</div>
             </div>
     
         </div>
@@ -598,29 +599,32 @@ function openWindow() {
 
 
 
-    function projetoZoom(){
+function projetoZoom(){
         
         let projUm = window.document.getElementById("projeto1")
+        let projDois = window.document.getElementById("projeto2");
         projUm.style.width = "600px";
         projUm.style.height = "300px";
         projUm.style.position = "absolute";
         projUm.style.backgroundSize = "700px";
         projUm.style.marginTop = "-150px";
+        projDois.style.display = "none";
 
-        
-
-
-
+    
     }
 
     function projetoZoomoff() {
-        let projUm = window.document.getElementById("projeto1")
+        let projUm = window.document.getElementById("projeto1");
+        let projDois = window.document.getElementById("projeto2");
         projUm.style.width = "160px";
         projUm.style.height = "80px";
         projUm.style.position = "relative";
         projUm.style.backgroundSize = "160px";
         projUm.style.marginTop = "0px";
+        projDois.style.display = "block";
     }
+
+  
 
     var imgProj = 1;
     function nextImageButton() {
@@ -637,6 +641,12 @@ function openWindow() {
             imgProjElement.style.backgroundImage = "url(img/proj-01.jpg)";
             imgProj = 1;
         }
+    }
+
+
+    function newWindow() {
+        let url = "https://muller-pedro.github.io/basic-calculator-JS/";
+        window.open(url, '_blank');
     }
     
 
